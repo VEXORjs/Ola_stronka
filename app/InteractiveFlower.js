@@ -3,7 +3,6 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useEffect, useRef} from "react";
 import * as THREE from "three";
-// Te importy mogą wymagać 'three/examples/jsm/...' jeśli zainstalowałeś przez npm
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
@@ -25,7 +24,7 @@ export default function TDF_InteractiveFlower(props) {
 
     const containerRef = useRef(null);
     const engineRef = useRef(null);
-    const isStatic = false; // W Next.js zawsze chcemy interaktywną wersję
+    const isStatic = false; // In Next.js always interactive
 
     useEffect(() => {
         if (!containerRef.current) return;
